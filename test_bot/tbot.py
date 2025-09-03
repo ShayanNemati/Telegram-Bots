@@ -1,10 +1,11 @@
 from g4f.client import Client
 import telebot as tb
+import requests
 import os
 
 tb.apihelper.proxy = {
-    'http': 'socks5://185.107.48.7:64312',
-    'https': 'socks5://185.107.48.7:64312'
+    'http': 'socks4://185.107.48.7:64312',
+    'https': 'socks4://185.107.48.7:64312'
 }
 
 API_TOKEN = os.getenv("API_TOKEN")
