@@ -1,7 +1,10 @@
 from g4f.client import Client
 import telebot as tb
+import os
 
-bot = tb.TeleBot('8011470403:AAFy9APlzoND1-9SUVxgHId22FSJFFtGE-s')
+API_TOKEN = os.getenv("API_TOKEN")
+
+bot = tb.TeleBot(API_TOKEN)
 client = Client()
 
 @bot.message_handler(commands=["start"])
