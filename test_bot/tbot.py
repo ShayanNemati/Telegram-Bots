@@ -3,11 +3,6 @@ import telebot as tb
 import requests
 import os
 
-tb.apihelper.proxy = {
-    'http': 'socks4://185.107.48.7:64312',
-    'https': 'socks4://185.107.48.7:64312'
-}
-
 API_TOKEN = os.getenv("API_TOKEN")
 
 bot = tb.TeleBot(API_TOKEN)
