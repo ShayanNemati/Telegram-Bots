@@ -31,6 +31,10 @@ def options(message):
             messages = [{"role": "user", "content": message.text}],
             web_search = False
         )
-        bot.send_message(message.chat.id,response.choices[0].message.content)
+        text = response.choices[0].message.content
+        if text and text.strip():
+            bot.send_message(message.chat.id, text)
+        else:
+            bot.send_message(message.chat.id, "please send a message...")
 
 bot.polling()
